@@ -84,9 +84,17 @@ A repo of Big Data Course's Project
 ## Qeustions
 
 - 0. DB creation
+
   - 0_creation.cypher
-- 1. 
-- 2. 
+    ![q0](./pic/q0.png)
+
+- 1.
+- 2.
 - 3. Based on the constructors' points, categorize all constructors into top-tier, mid-tier, and bottom-tier squads. (Unsupervised clustering)
 - 4. Develop a logistic regression model to predict the presence of the 'belongs_to' relationship between a driver node and a constructor node.
+
+![q4](./pic/q4.png)
+
 - 5. Cluster the drivers based on their year of birth, using Python.
+
+
