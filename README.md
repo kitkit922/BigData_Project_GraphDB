@@ -88,8 +88,10 @@ A repo of Big Data Course's Project
   - 0_creation.cypher
     ![q0](./pic/q0.png)
 
-- 1.
-- 2.
+- 1. Which engine is the best? (Contribure most points)
+![q4](./pic/q4.png)
+- 2. Top 5 drivers who has the most retirement? 
+![q4](./pic/q4.png)
 - 3. Based on the constructors' points, categorize all constructors into top-tier, mid-tier, and bottom-tier squads. (Unsupervised clustering)
 - 4. Develop a logistic regression model to predict the presence of the 'belongs_to' relationship between a driver node and a constructor node.
 
