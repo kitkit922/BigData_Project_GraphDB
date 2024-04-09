@@ -60,27 +60,6 @@ CALL gds.beta.pipeline.linkPrediction.configureSplit(
 // Add a model candidate (a logistic regression with no further configuration here).
 // CALL gds.beta.pipeline.linkPrediction.addLogisticRegression('pip_belongs');
 
-
-CALL gds.alpha.pipeline.linkPrediction.addMLP('pip_belongs');
-// 7-Create and Train a model
-CALL gds.beta.pipeline.linkPrediction.train(
-    // 	Name of the projected graph to use for training.
-    'graph_belongs',
-    {
-        pipeline: 'pip_belongs',   // 	Name of the configured pipeline.
-        modelName: 'model_belongs',  // Name of the model to train.
-        targetRelationshipType: 'BELONGS_TO', // Name of the relationship to train the model on.
-        metrics: ['AUCPR']     // Metrics used to evaluate the models (AUCPR here).
-    }
-)
-YIELD modelInfo
-RETURN
-    modelInfo.bestParameters AS winningModel,       // Parameters of the best performing model returned by the training process.
-    modelInfo.metrics.AUCPR.train.avg AS avgTrainScore,         // Evaluated metrics (here for AUCPR) of the best performing model returned by the training process.
-    modelInfo.metrics.AUCPR.validation.avg AS avgValidationScore,
-    modelInfo.metrics.AUCPR.outerTrain AS outerTrainScore,
-    modelInfo.metrics.AUCPR.test AS testScore
-
 // 7-Drop a model
 // CALL gds.model.drop('model_belongs') YIELD modelName      
 

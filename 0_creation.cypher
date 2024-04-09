@@ -1,6 +1,6 @@
-// // Remove all existing node
-// MATCH (n)
-// DETACH DELETE n
+// Remove all existing node
+MATCH (n)
+DETACH DELETE n
 
 //Drivers
 CREATE
